@@ -1,0 +1,32 @@
+{%extends 'layout.html'%}
+          {%block body%}
+            <div class="card w-100">
+              <div class="card-body p-4">
+                <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+                  <div class="mb-12 mb-sm-12 w-100">
+
+                    <form  method="post" class="card-title fw-semibold mt-4  " >
+                      {% csrf_token %}
+                        <h1 class="text-center">
+                      ADD COURSE
+                    </h1>
+                  <div class="mb-3 ">
+                    <label  class="form-label">Name course</label>
+                    <input type="text" class="form-control" id="exampleInputtext1" name="name" aria-describedby="textHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"> duration</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1"  name="duration" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label">details</label>
+                        <textarea class="form-control" name="details" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Save</button>
+                    </form>
+                  </div>
+                </div>
+                </div>
+              </div>
+
+              {%endblock%}
