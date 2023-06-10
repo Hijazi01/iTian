@@ -16,5 +16,11 @@ def Cadd(req):
 def Cdelete(req,ID):
     Course.objects.filter(id=ID).delete()
     return HttpResponseRedirect('/course')
-def Cupdate(req):
-    return render(req,'courses/update.html')
+def Cupdate(req,ID):
+    context = {}
+    C = Course.objects.get(id=ID)
+    context['cup'] = C
+    if (req.method == "POST"):
+        Course.objects.filter(id=ID).update(name=req.POST['name'], age=req.POST['age'], email=req.POST['email'],faculty=req.POST['faculty'], appreciation=req.POST['appreciation'])
+        return HttpResponseRedirect('courses/')
+    return render(req,'courses/update.html', context)

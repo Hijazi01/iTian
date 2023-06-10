@@ -29,4 +29,5 @@ urlpatterns = [
     path('profile/',profile, name='profile'),
     path( 'list/',all_list,name='listall'),
 
+
 ]

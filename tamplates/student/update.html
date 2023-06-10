@@ -4,7 +4,6 @@
               <div class="card-body p-4">
                 <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
                   <div class="mb-12 mb-sm-12 w-100">
-
                     <form  method="post" class="card-title fw-semibold mt-4  " >
                       {% csrf_token %}
                         <h1 class="text-center">
@@ -12,27 +11,25 @@
                     </h1>
                   <div class="mb-3 ">
                     <label  class="form-label">Name student</label>
-                    <input type="text" class="form-control" id="exampleInputtext1" name="name" aria-describedby="textHelp">
+                    <input type="text" class="form-control" id="exampleInputtext1" value={{tup.name}} name="name" aria-describedby="textHelp">
                   </div>
                   <div class="mb-3">
                     <label  class="form-label"> age</label>
-                    <input type="number" class="form-control"  name="age" aria-describedby="emailHelp">
+                    <input type="number" class="form-control" value={{tup.age}}  name="age" aria-describedby="emailHelp">
                   </div>
                         <div class="mb-3">
                     <label  class="form-label"> email</label>
-                    <input type="email" class="form-control"   name="email" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" value={{tup.email}}  name="email" aria-describedby="emailHelp">
                   </div>
-
                         <div class="mb-3">
                     <label class="form-label">Faculty</label>
-                    <input type="text" class="form-control"   name="Faculty" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" value={{tup.faculty}}  name="faculty" aria-describedby="emailHelp">
                   </div>
-
                         <div class="mb-4">
                     <label class="form-label">appreciation</label>
-                    <input type="text" class="form-control"   name="appreciation" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" value={{tup.appreciation}}  name="appreciation" aria-describedby="emailHelp">
                   </div>
-                  <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Save</button>
+                  <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">update</button>
                     </form>
                   </div>
                 </div>
